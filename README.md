@@ -32,7 +32,7 @@ The widget needs to be configured from the admin
 
 # Usage instructions #
 
-Apply featured offers to products
+Set featured attribute to yes on products
 
 Go to `/featured`
 
