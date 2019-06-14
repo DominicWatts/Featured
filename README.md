@@ -6,11 +6,19 @@ For products to display they must be on set as featured yes under the selected s
 
 The widget needs to be configured from the admin
 
+## Attribute configuration ## 
+
 ![Attribute Screenshot](https://i.snag.gy/9cZiy0.jpg)
+
+## Landing page ##
 
 ![Landing page screenshot](https://i.snag.gy/zVZ0n4.jpg)
 
+## Widget Configuration ##
+
 ![Widget Config](https://i.snag.gy/wvdsfK.jpg)
+
+## Widget Screenshot ##
 
 ![Widget screenshot](https://i.snag.gy/bzyjxg.jpg)
 
@@ -28,4 +36,5 @@ Apply featured offers to products
 
 Go to `/featured`
 
+Configure widget in backend
 
