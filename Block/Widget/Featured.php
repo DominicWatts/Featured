@@ -19,14 +19,12 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Name of request parameter for page number value
-     *
      * @deprecated
      */
     const PAGE_VAR_NAME = 'fp';
 
     /**
      * Instance of pager block
-     *
      * @var \Magento\Catalog\Block\Product\Widget\Html\Pager
      */
     protected $_pager;
@@ -38,7 +36,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Featured constructor.
-     *
      * @param \Magento\Catalog\Block\Product\Context $context
      * @param \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
      * @param \Magento\Catalog\Model\Product\Visibility $catalogProductVisibility
@@ -67,7 +64,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Product collection initialize process
-     *
      * @return \Magento\Catalog\Model\ResourceModel\Product\Collection|Object|\Magento\Framework\Data\Collection
      */
     protected function _getProductCollection()
@@ -77,7 +73,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Prepare collection for recent product list
-     *
      * @return \Magento\Catalog\Model\ResourceModel\Product\Collection|Object|\Magento\Framework\Data\Collection
      */
     protected function _getFeaturedProductsCollection()
@@ -97,17 +92,15 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Get number of current page based on query value
-     *
      * @return int
      */
     public function getCurrentPage()
     {
-        return abs((int)$this->getRequest()->getParam($this->getData('page_var_name')));
+        return abs((int) $this->getRequest()->getParam($this->getData('page_var_name')));
     }
 
     /**
      * Get key pieces for caching block content
-     *
      * @return array
      */
     public function getCacheKeyInfo()
@@ -116,7 +109,7 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
             parent::getCacheKeyInfo(),
             [
                 $this->getProductsPerPage(),
-                (int)$this->getRequest()->getParam($this->getData('page_var_name'), 1),
+                (int) $this->getRequest()->getParam($this->getData('page_var_name'), 1),
                 $this->serializer->serialize($this->getRequest()->getParams())
             ]
         );
@@ -124,7 +117,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Retrieve how many products should be displayed
-     *
      * @return int
      */
     public function getProductsCount()
@@ -137,7 +129,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Retrieve how many products should be displayed
-     *
      * @return int
      */
     public function getProductsPerPage()
@@ -150,7 +141,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Return flag whether pager need to be shown or not
-     *
      * @return bool
      */
     public function showPager()
@@ -158,12 +148,11 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
         if (!$this->hasData('show_pager')) {
             $this->setData('show_pager', self::DEFAULT_SHOW_PAGER);
         }
-        return (bool)$this->getData('show_pager');
+        return (bool) $this->getData('show_pager');
     }
 
     /**
      * Retrieve how many products should be displayed on page
-     *
      * @return int
      */
     protected function getPageSize()
@@ -173,7 +162,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Render pagination HTML
-     *
      * @return string
      */
     public function getPagerHtml()
@@ -202,7 +190,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Return HTML block with price
-     *
      * @param \Magento\Catalog\Model\Product $product
      * @param string $priceType
      * @param string $renderZone

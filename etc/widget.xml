@@ -4,14 +4,13 @@
         <label>Featured Products List</label>
         <description>List of products that are set as featured Products</description>
         <parameters>
-            <parameter name="show_pager" xsi:type="select" visible="true"
-                        source_model="Magento\Config\Model\Config\Source\Yesno">
+            <parameter name="show_pager" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
                 <label translate="true">Display Page Control</label>
             </parameter>
             <parameter name="products_per_page" xsi:type="text" required="true" visible="true">
                 <label translate="true">Number of Products per Page</label>
                 <depends>
-                    <parameter name="show_pager" value="1" />
+                    <parameter name="show_pager" value="1"/>
                 </depends>
                 <value>5</value>
             </parameter>
@@ -49,18 +48,18 @@
         </parameters>
         <containers>
             <container name="sidebar.main">
-                <template name="default" value="list_default" />
-                <template name="names_only" value="list_names" />
-                <template name="images_only" value="list_images" />
+                <template name="default" value="list_default"/>
+                <template name="names_only" value="list_names"/>
+                <template name="images_only" value="list_images"/>
             </container>
             <container name="content">
-                <template name="grid" value="default" />
-                <template name="list" value="list" />
+                <template name="grid" value="default"/>
+                <template name="list" value="list"/>
             </container>
             <container name="sidebar.additional">
-                <template name="default" value="list_default" />
-                <template name="names_only" value="list_names" />
-                <template name="images_only" value="list_images" />
+                <template name="default" value="list_default"/>
+                <template name="names_only" value="list_names"/>
+                <template name="images_only" value="list_images"/>
             </container>
         </containers>
     </widget>

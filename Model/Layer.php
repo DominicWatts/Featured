@@ -1,4 +1,5 @@
 <?php
+
 namespace Xigen\Featured\Model;
 
 use Magento\Catalog\Api\CategoryRepositoryInterface;
@@ -10,6 +11,23 @@ use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
  */
 class Layer extends \Magento\Catalog\Model\Layer
 {
+    /**
+     * @var CollectionFactory
+     */
+    protected $productCollectionFactory;
+
+    /**
+     * Layer constructor.
+     * @param \Magento\Catalog\Model\Layer\ContextInterface $context
+     * @param \Magento\Catalog\Model\Layer\StateFactory $layerStateFactory
+     * @param AttributeCollectionFactory $attributeCollectionFactory
+     * @param \Magento\Catalog\Model\ResourceModel\Product $catalogProduct
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Framework\Registry $registry
+     * @param CategoryRepositoryInterface $categoryRepository
+     * @param CollectionFactory $productCollectionFactory
+     * @param array $data
+     */
     public function __construct(
         \Magento\Catalog\Model\Layer\ContextInterface $context,
         \Magento\Catalog\Model\Layer\StateFactory $layerStateFactory,
@@ -41,7 +59,7 @@ class Layer extends \Magento\Catalog\Model\Layer
         } else {
             $collection = $this->productCollectionFactory->create();
             $collection->addAttributeToFilter('featured', ['eq' => 1]);
-         
+
             $this->prepareProductCollection($collection);
             $this->_productCollections['xigen_custom'] = $collection;
         }

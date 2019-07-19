@@ -14,11 +14,13 @@ use Magento\Eav\Setup\EavSetupFactory;
  */
 class InstallData implements InstallDataInterface
 {
+    /**
+     * @var EavSetupFactory
+     */
     private $eavSetupFactory;
 
     /**
      * Constructor
-     *
      * @param \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
      */
     public function __construct(EavSetupFactory $eavSetupFactory)
