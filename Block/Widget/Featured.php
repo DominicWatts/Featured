@@ -80,7 +80,7 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
         /** @var $collection \Magento\Catalog\Model\ResourceModel\Product\Collection */
         $collection = $this->_productCollectionFactory->create();
         $collection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());
-
+        $collection->getSelect()->orderRand();
         $collection = $this->_addProductAttributesAndPrices($collection)
             ->addStoreFilter()
             ->addAttributeToSort('created_at', 'desc')
