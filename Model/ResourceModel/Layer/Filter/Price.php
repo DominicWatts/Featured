@@ -12,6 +12,43 @@ use Magento\Framework\Search\Request\IndexScopeResolverInterface;
 class Price extends \Magento\Catalog\Model\ResourceModel\Layer\Filter\Price
 {
     /**
+     * Core event manager proxy
+     *
+     * @var \Magento\Framework\Event\ManagerInterface
+     */
+    protected $_eventManager = null;
+
+    /**
+     * @var \Magento\Catalog\Model\Layer
+     */
+    private $layer;
+
+    /**
+     * @var \Magento\Customer\Model\Session
+     */
+    private $session;
+
+    /**
+     * @var \Magento\Store\Model\StoreManagerInterface
+     */
+    private $storeManager;
+
+    /**
+     * @var IndexScopeResolverInterface|null
+     */
+    private $priceTableResolver;
+
+    /**
+     * @var Context
+     */
+    private $httpContext;
+
+    /**
+     * @var DimensionFactory|null
+     */
+    private $dimensionFactory;
+
+    /**
      * Price constructor.
      * @param \Magento\Framework\Model\ResourceModel\Db\Context $context
      * @param \Magento\Framework\Event\ManagerInterface $eventManager
@@ -34,6 +71,14 @@ class Price extends \Magento\Catalog\Model\ResourceModel\Layer\Filter\Price
         Context $httpContext = null,
         DimensionFactory $dimensionFactory = null
     ) {
+        $this->layer = $layerResolver->get();
+        $this->session = $session;
+        $this->storeManager = $storeManager;
+        $this->_eventManager = $eventManager;
+        $this->priceTableResolver = $priceTableResolver
+            ?? ObjectManager::getInstance()->get(IndexScopeResolverInterface::class);
+        $this->httpContext = $httpContext ?? ObjectManager::getInstance()->get(Context::class);
+        $this->dimensionFactory = $dimensionFactory ?? ObjectManager::getInstance()->get(DimensionFactory::class);
         parent::__construct(
             $context,
             $eventManager,
