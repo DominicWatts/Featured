@@ -7,9 +7,6 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-/**
- * InstallData class
- */
 class InstallData implements InstallDataInterface
 {
     /**
