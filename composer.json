@@ -3,7 +3,7 @@
     "description": "Featured products attribute, landing page with layered navigation and widget",
     "type": "magento2-module",
     "license": "proprietary",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "authors": [
         {
             "name": "Dominic Xigen",
