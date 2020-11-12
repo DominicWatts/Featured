@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Block;
 
-/**
- * Navigation block class
- */
 class Navigation extends \Magento\LayeredNavigation\Block\Navigation
 {
     /**

@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Block;
 
-/**
- * Class Link
- */
 class Link extends \Magento\Framework\View\Element\Html\Link
 {
     /**

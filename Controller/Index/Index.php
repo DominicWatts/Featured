@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Controller\Index;
 
-/**
- * Index Action class
- */
 class Index extends \Magento\Framework\App\Action\Action
 {
     /**

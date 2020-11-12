@@ -6,8 +6,8 @@
 ?>
 <?php
 
-// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
-// phpcs:disable Magento2.Files.LineLength.MaxExceeded
+// phpcs:disable Magento2.Templates.ThisInTemplate
+// phpcs:disable Generic.Files.LineLength
 
 /**
  * Template for displaying featured products widget
@@ -120,10 +120,10 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                 <?php if ($description):?>
                                     <div class="product-item-description">
                                         <?= /* @noEscape */ $_helper->productAttribute(
-                                                            $_item,
-                                                            $_item->getShortDescription(),
-                                                            'short_description'
-                                                        ) ?>
+                                            $_item,
+                                            $_item->getShortDescription(),
+                                            'short_description'
+                                        ) ?>
                                         <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
                                            href="<?= $block->escapeUrl($block->getProductUrl($_item))?>"
                                            class="action more"><?= $block->escapeHtml(__('Learn More')) ?></a>

@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Block\Navigation;
 
-/**
- * State block class
- */
 class State extends \Magento\LayeredNavigation\Block\Navigation\State
 {
     /**

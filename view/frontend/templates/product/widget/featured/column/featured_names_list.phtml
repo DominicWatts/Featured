@@ -4,7 +4,8 @@
  * See COPYING.txt for license details.
  */
 
-// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+// phpcs:disable Magento2.Templates.ThisInTemplate
+// phpcs:disable Generic.Files.LineLength
 ?>
 <?php if (($_products = $block->getProductCollection()) && $_products->getSize()): ?>
     <div class="block widget block-featured-products-names">
@@ -22,8 +23,8 @@
                                title="<?= /* @noEscape */ $block->stripTags($_product->getName(), null, true) ?>)"
                                class="product-item-link">
                                 <?= /* @noEscape */ $this->helper(
-    Magento\Catalog\Helper\Output::class
-)->productAttribute($_product, $_product->getName(), 'name') ?>
+                                    Magento\Catalog\Helper\Output::class
+                                )->productAttribute($_product, $_product->getName(), 'name') ?>
                             </a>
                         </strong>
                     </li>

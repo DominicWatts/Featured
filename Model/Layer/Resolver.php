@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Model\Layer;
 
-/**
- * Resolver class
- */
 class Resolver extends \Magento\Catalog\Model\Layer\Resolver
 {
     /**
