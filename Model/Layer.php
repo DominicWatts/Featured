@@ -6,9 +6,6 @@ use Magento\Catalog\Api\CategoryRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory as AttributeCollectionFactory;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
-/**
- * Layer class
- */
 class Layer extends \Magento\Catalog\Model\Layer
 {
     /**

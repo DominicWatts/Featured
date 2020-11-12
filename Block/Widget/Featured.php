@@ -19,7 +19,6 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
 
     /**
      * Name of request parameter for page number value
-     * @deprecated
      */
     const PAGE_VAR_NAME = 'fp';
 

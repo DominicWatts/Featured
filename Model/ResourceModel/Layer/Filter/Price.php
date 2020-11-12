@@ -3,12 +3,10 @@
 namespace Xigen\Featured\Model\ResourceModel\Layer\Filter;
 
 use Magento\Framework\App\Http\Context;
+use Magento\Framework\App\ObjectManager;
 use Magento\Framework\Indexer\DimensionFactory;
 use Magento\Framework\Search\Request\IndexScopeResolverInterface;
 
-/**
- * Price Filter
- */
 class Price extends \Magento\Catalog\Model\ResourceModel\Layer\Filter\Price
 {
     /**

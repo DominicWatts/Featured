@@ -2,9 +2,6 @@
 
 namespace Xigen\Featured\Block\Product;
 
-/**
- * ListProduct block class
- */
 class ListProduct extends \Magento\Catalog\Block\Product\ListProduct
 {
     /**
