@@ -74,6 +74,8 @@ class AddFeaturedProductAttribute implements DataPatchInterface, PatchRevertable
         );
 
         $this->moduleDataSetup->getConnection()->endSetup();
+
+        return $this;
     }
 
     public function revert()
