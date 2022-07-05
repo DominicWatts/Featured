@@ -178,7 +178,7 @@ class Featured extends \Magento\Catalog\Block\Product\NewProduct implements \Mag
                     ->setPageVarName($this->getData('page_var_name'))
                     ->setLimit($this->getProductsPerPage())
                     ->setTotalLimit($this->getProductsCount())
-                    ->setCollection($this->getProductCollection());
+                    ->setCollection($this->_getProductCollection());
             }
             if ($this->_pager instanceof \Magento\Framework\View\Element\AbstractBlock) {
                 return $this->_pager->toHtml();

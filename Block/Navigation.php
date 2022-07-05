@@ -23,7 +23,8 @@ class Navigation extends \Magento\LayeredNavigation\Block\Navigation
             $context,
             $layerResolver,
             $filterList,
-            $visibilityFlag
+            $visibilityFlag,
+            $data
         );
     }
 }
